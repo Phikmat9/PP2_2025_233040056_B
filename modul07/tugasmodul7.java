@@ -60,7 +60,7 @@ public class tugasmodul7 extends JFrame  {
         public void actionPerformed(ActionEvent e) {
                 txtNama.setText("");
                 txtNilai.setText("");
-                cmbMatkul.setSelectedItem(0);
+                cmbMatkul.setSelectedIndex(0);
             }
         });
         return panel;
@@ -123,14 +123,14 @@ public class tugasmodul7 extends JFrame  {
             nilai = Integer.parseInt(strNilai);
             if (nilai < 0 || nilai > 100) {
                 JOptionPane.showMessageDialog(this,
-                        "Nilai harus antara u - 100!",
+                        "Nilai harus antara 0 - 100!",
                         "Error Validasi", JOptionPane.WARNING_MESSAGE);
                 return;
             }
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, 
                 "Nilai harus berupa angka!",
-                "Errpr Validasi", JOptionPane.ERROR_MESSAGE);
+                "Error Validasi", JOptionPane.ERROR_MESSAGE);
             return;
         }
       
@@ -176,7 +176,7 @@ public class tugasmodul7 extends JFrame  {
     
     
    public tugasmodul7() {
-       setTitle("Aplikasi Manajemen Nilai Sisaw");
+       setTitle("Aplikasi Manajemen Nilai Siswa");
        setSize (500, 400);
        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        setLocationRelativeTo(null);
